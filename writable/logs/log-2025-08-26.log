@@ -239,3 +239,78 @@ JOIN `grados` ON `estudiantes`.`codigo_grado` = `grados`.`codigo_grado`', [], fa
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 16:41:11 --> Error: Call to undefined function post()
+[Method: GET, Route: /]
+in APPPATH\Config\Routes.php on line 11.
+ 1 SYSTEMPATH\Router\RouteCollection.php(339): require()
+ 2 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 16:41:53 --> Error: Class "App\Controllers\EstudianteModel" not found
+[Method: GET, Route: buscar_estudiante/3]
+in APPPATH\Controllers\EstudiantesController.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EstudiantesController->buscarEstudiante('3')
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 16:42:15 --> ErrorException: Undefined variable $datosGrados
+[Method: GET, Route: buscar_estudiante/3]
+in APPPATH\Views\from_modificar_estudiante.php on line 33.
+ 1 APPPATH\Views\from_modificar_estudiante.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosGrados', 'C:\\xampp\\htdocs\\fs2025\\ci4_biblioteca2\\app\\Views\\from_modificar_estudiante.php', 33)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\fs2025\\ci4_biblioteca2\\app\\Views\\from_modificar_estudiante.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('from_modificar_estudiante', [], true)
+ 5 APPPATH\Controllers\EstudiantesController.php(47): view('from_modificar_estudiante', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EstudiantesController->buscarEstudiante('3')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 16:44:48 --> ErrorException: Undefined variable $datosdatosEstudiante
+[Method: GET, Route: buscar_estudiante/3]
+in APPPATH\Views\from_modificar_estudiante.php on line 18.
+ 1 APPPATH\Views\from_modificar_estudiante.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosdatosEstudiante', 'C:\\xampp\\htdocs\\fs2025\\ci4_biblioteca2\\app\\Views\\from_modificar_estudiante.php', 18)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\fs2025\\ci4_biblioteca2\\app\\Views\\from_modificar_estudiante.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('from_modificar_estudiante', [], true)
+ 5 APPPATH\Controllers\EstudiantesController.php(53): view('from_modificar_estudiante', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EstudiantesController->buscarEstudiante('3')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 16:52:40 --> ErrorException: Undefined array key "codigoGrado"
+[Method: GET, Route: buscar_estudiante/2013043]
+in APPPATH\Views\from_modificar_estudiante.php on line 34.
+ 1 APPPATH\Views\from_modificar_estudiante.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "codigoGrado"', 'C:\\xampp\\htdocs\\fs2025\\ci4_biblioteca2\\app\\Views\\from_modificar_estudiante.php', 34)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\fs2025\\ci4_biblioteca2\\app\\Views\\from_modificar_estudiante.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('from_modificar_estudiante', [], true)
+ 5 APPPATH\Controllers\EstudiantesController.php(53): view('from_modificar_estudiante', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EstudiantesController->buscarEstudiante('2013043')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 16:53:01 --> ErrorException: Undefined array key "codigo_grado"
+[Method: GET, Route: buscar_estudiante/2013056]
+in APPPATH\Views\from_modificar_estudiante.php on line 34.
+ 1 APPPATH\Views\from_modificar_estudiante.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "codigo_grado"', 'C:\\xampp\\htdocs\\fs2025\\ci4_biblioteca2\\app\\Views\\from_modificar_estudiante.php', 34)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\fs2025\\ci4_biblioteca2\\app\\Views\\from_modificar_estudiante.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('from_modificar_estudiante', [], true)
+ 5 APPPATH\Controllers\EstudiantesController.php(53): view('from_modificar_estudiante', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EstudiantesController->buscarEstudiante('2013056')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

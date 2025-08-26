@@ -88,6 +88,9 @@
                     <td> <?=$estudiante->apellido;?></td>
                     <td> <?=$estudiante->telefono;?></td>
                     <td> <?=$estudiante->grado;?> </td>
+                    <td>
+                        <a href="<?=base_url('buscar_estudiante/').$estudiante->carne_alumno;?>" class="btn btn-info">Actualizar</a>
+                    </td>
                 </tr>
                 <?php 
                 }

@@ -41,4 +41,16 @@ class EstudiantesController extends BaseController
         $estudiante->insert($datos);
         return redirect()->route('estudiantes');
     }
+    public function buscarEstudiante($carnet){
+        //datos estudiantes
+        $estudiante = new EstudiantesModel();
+        $datos['datosEstudiante']=$estudiante->where('carne_alumno', $carnet)->first();
+        //datos grados
+        //crear un objeto de tipo GradoModel
+        $grados = new GradosModel();
+        $datos['datosGrados']=$grados->findAll();
+        
+        return view('from_modificar_estudiante',$datos);
+
+    }
 }
