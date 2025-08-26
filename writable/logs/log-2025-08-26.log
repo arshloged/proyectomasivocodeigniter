@@ -1,0 +1,241 @@
+CRITICAL - 2025-08-26 15:03:24 --> ErrorException: Undefined variable $datosGrados
+[Method: GET, Route: estudiantes]
+in APPPATH\Views\estudiantes.php on line 47.
+ 1 APPPATH\Views\estudiantes.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosGrados', 'C:\\xampp\\htdocs\\fs2025\\ci4_biblioteca2\\app\\Views\\estudiantes.php', 47)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\fs2025\\ci4_biblioteca2\\app\\Views\\estudiantes.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('estudiantes', [], true)
+ 5 APPPATH\Controllers\EstudiantesController.php(13): view('estudiantes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EstudiantesController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 15:26:29 --> Error: Call to undefined method App\Controllers\EstudiantesController::request()
+[Method: POST, Route: agregar_estudiante]
+in APPPATH\Controllers\EstudiantesController.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EstudiantesController->agregarEstudiante()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 15:38:16 --> ErrorException: Undefined variable $db
+[Method: GET, Route: estudiantes]
+in APPPATH\Controllers\EstudiantesController.php on line 14.
+ 1 APPPATH\Controllers\EstudiantesController.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\xampp\\htdocs\\fs2025\\ci4_biblioteca2\\app\\Controllers\\EstudiantesController.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EstudiantesController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-26 15:39:25 --> mysqli_sql_exception: Column 'codigo_grado' in on clause is ambiguous in C:\xampp\htdocs\fs2025\ci4_biblioteca2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\fs2025\ci4_biblioteca2\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\fs2025\ci4_biblioteca2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\fs2025\ci4_biblioteca2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\fs2025\ci4_biblioteca2\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\fs2025\ci4_biblioteca2\app\Controllers\EstudiantesController.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fs2025\ci4_biblioteca2\system\CodeIgniter.php(933): App\Controllers\EstudiantesController->index()
+#6 C:\xampp\htdocs\fs2025\ci4_biblioteca2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+#7 C:\xampp\htdocs\fs2025\ci4_biblioteca2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fs2025\ci4_biblioteca2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\fs2025\ci4_biblioteca2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\fs2025\ci4_biblioteca2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-08-26 15:39:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'codigo_grado' in on clause is ambiguous
+[Method: GET, Route: estudiantes]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `estudiantes`
+JOIN `grados` ON `codigo_grado` = `codigo_grado`', [], false)
+ 2 APPPATH\Controllers\EstudiantesController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EstudiantesController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 15:39:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'codigo_grado' in on clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `estudiantes`
+JOIN `grados` ON `codigo_grado` = `codigo_grado`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `estudiantes`
+JOIN `grados` ON `codigo_grado` = `codigo_grado`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `estudiantes`
+JOIN `grados` ON `codigo_grado` = `codigo_grado`', [], false)
+ 4 APPPATH\Controllers\EstudiantesController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EstudiantesController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 15:39:26 --> [Caused by] mysqli_sql_exception: Column 'codigo_grado' in on clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `estudiantes`
+JOIN `grados` ON `codigo_grado` = `codigo_grado`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `estudiantes`
+JOIN `grados` ON `codigo_grado` = `codigo_grado`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `estudiantes`
+JOIN `grados` ON `codigo_grado` = `codigo_grado`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `estudiantes`
+JOIN `grados` ON `codigo_grado` = `codigo_grado`', [], false)
+ 5 APPPATH\Controllers\EstudiantesController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EstudiantesController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 15:39:48 --> Error: Cannot use object of type mysqli as array
+[Method: GET, Route: estudiantes]
+in APPPATH\Views\estudiantes.php on line 86.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('estudiantes', [], true)
+ 4 APPPATH\Controllers\EstudiantesController.php(26): view('estudiantes', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EstudiantesController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 15:40:35 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Builder::findAll()
+[Method: GET, Route: estudiantes]
+in APPPATH\Controllers\EstudiantesController.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EstudiantesController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 15:42:11 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Builder::getResult()
+[Method: GET, Route: estudiantes]
+in APPPATH\Controllers\EstudiantesController.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EstudiantesController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 15:42:47 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: estudiantes]
+in APPPATH\Views\estudiantes.php on line 86.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('estudiantes', [], true)
+ 4 APPPATH\Controllers\EstudiantesController.php(26): view('estudiantes', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EstudiantesController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 15:47:29 --> ErrorException: Undefined property: stdClass::$estudiantes
+[Method: GET, Route: estudiantes]
+in APPPATH\Views\estudiantes.php on line 87.
+ 1 APPPATH\Views\estudiantes.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$estudiantes', 'C:\\xampp\\htdocs\\fs2025\\ci4_biblioteca2\\app\\Views\\estudiantes.php', 87)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\fs2025\\ci4_biblioteca2\\app\\Views\\estudiantes.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('estudiantes', [], true)
+ 5 APPPATH\Controllers\EstudiantesController.php(26): view('estudiantes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EstudiantesController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 15:47:38 --> ErrorException: Undefined property: stdClass::$grados
+[Method: GET, Route: estudiantes]
+in APPPATH\Views\estudiantes.php on line 90.
+ 1 APPPATH\Views\estudiantes.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$grados', 'C:\\xampp\\htdocs\\fs2025\\ci4_biblioteca2\\app\\Views\\estudiantes.php', 90)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\fs2025\\ci4_biblioteca2\\app\\Views\\estudiantes.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('estudiantes', [], true)
+ 5 APPPATH\Controllers\EstudiantesController.php(26): view('estudiantes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EstudiantesController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-26 15:48:35 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '*, (grados.nombre) as grado)
+JOIN `grados` ON `estudiantes`.`codigo_grado` = ...' at line 2 in C:\xampp\htdocs\fs2025\ci4_biblioteca2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\fs2025\ci4_biblioteca2\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM (...', 0)
+#1 C:\xampp\htdocs\fs2025\ci4_biblioteca2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM (...')
+#2 C:\xampp\htdocs\fs2025\ci4_biblioteca2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM (...')
+#3 C:\xampp\htdocs\fs2025\ci4_biblioteca2\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM (...', Array, false)
+#4 C:\xampp\htdocs\fs2025\ci4_biblioteca2\app\Controllers\EstudiantesController.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fs2025\ci4_biblioteca2\system\CodeIgniter.php(933): App\Controllers\EstudiantesController->index()
+#6 C:\xampp\htdocs\fs2025\ci4_biblioteca2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+#7 C:\xampp\htdocs\fs2025\ci4_biblioteca2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fs2025\ci4_biblioteca2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\fs2025\ci4_biblioteca2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\fs2025\ci4_biblioteca2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-08-26 15:48:35 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '*, (grados.nombre) as grado)
+JOIN `grados` ON `estudiantes`.`codigo_grado` = ...' at line 2
+[Method: GET, Route: estudiantes]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM (`estudiantes`.*, (grados.nombre) as grado)
+JOIN `grados` ON `estudiantes`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 2 APPPATH\Controllers\EstudiantesController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EstudiantesController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 15:48:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '*, (grados.nombre) as grado)
+JOIN `grados` ON `estudiantes`.`codigo_grado` = ...' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM (`estudiantes`.*, (grados.nombre) as grado)
+JOIN `grados` ON `estudiantes`.`codigo_grado` = `grados`.`codigo_grado`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM (`estudiantes`.*, (grados.nombre) as grado)
+JOIN `grados` ON `estudiantes`.`codigo_grado` = `grados`.`codigo_grado`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM (`estudiantes`.*, (grados.nombre) as grado)
+JOIN `grados` ON `estudiantes`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 4 APPPATH\Controllers\EstudiantesController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EstudiantesController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 15:48:35 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '*, (grados.nombre) as grado)
+JOIN `grados` ON `estudiantes`.`codigo_grado` = ...' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM (`estudiantes`.*, (grados.nombre) as grado)
+JOIN `grados` ON `estudiantes`.`codigo_grado` = `grados`.`codigo_grado`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM (`estudiantes`.*, (grados.nombre) as grado)
+JOIN `grados` ON `estudiantes`.`codigo_grado` = `grados`.`codigo_grado`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM (`estudiantes`.*, (grados.nombre) as grado)
+JOIN `grados` ON `estudiantes`.`codigo_grado` = `grados`.`codigo_grado`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM (`estudiantes`.*, (grados.nombre) as grado)
+JOIN `grados` ON `estudiantes`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 5 APPPATH\Controllers\EstudiantesController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EstudiantesController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
