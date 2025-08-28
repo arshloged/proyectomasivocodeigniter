@@ -314,3 +314,570 @@ in APPPATH\Views\from_modificar_estudiante.php on line 34.
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-26 17:32:08 --> mysqli_sql_exception: Not unique table/alias: 'grados' in C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `grados`...', 0)
+#1 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `grados`...')
+#2 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `grados`...')
+#3 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`...', Array, false)
+#4 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\app\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(933): App\Controllers\GradosController->index()
+#6 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+#7 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-08-26 17:32:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'grados'
+[Method: GET, Route: grados]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 2 APPPATH\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GradosController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 17:32:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'grados'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 4 APPPATH\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GradosController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 17:32:08 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'grados'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 5 APPPATH\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GradosController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-26 17:33:02 --> mysqli_sql_exception: Not unique table/alias: 'grados' in C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `grados`...', 0)
+#1 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `grados`...')
+#2 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `grados`...')
+#3 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`...', Array, false)
+#4 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\app\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(933): App\Controllers\GradosController->index()
+#6 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+#7 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-08-26 17:33:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'grados'
+[Method: GET, Route: grados]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 2 APPPATH\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GradosController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 17:33:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'grados'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 4 APPPATH\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GradosController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 17:33:02 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'grados'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 5 APPPATH\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GradosController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-26 17:33:03 --> mysqli_sql_exception: Not unique table/alias: 'grados' in C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `grados`...', 0)
+#1 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `grados`...')
+#2 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `grados`...')
+#3 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`...', Array, false)
+#4 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\app\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(933): App\Controllers\GradosController->index()
+#6 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+#7 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-08-26 17:33:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'grados'
+[Method: GET, Route: grados]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 2 APPPATH\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GradosController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 17:33:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'grados'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 4 APPPATH\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GradosController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 17:33:03 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'grados'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 5 APPPATH\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GradosController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-26 17:33:03 --> mysqli_sql_exception: Not unique table/alias: 'grados' in C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `grados`...', 0)
+#1 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `grados`...')
+#2 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `grados`...')
+#3 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`...', Array, false)
+#4 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\app\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(933): App\Controllers\GradosController->index()
+#6 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+#7 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-08-26 17:33:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'grados'
+[Method: GET, Route: grados]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 2 APPPATH\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GradosController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 17:33:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'grados'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 4 APPPATH\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GradosController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 17:33:03 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'grados'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 5 APPPATH\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GradosController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-26 17:33:03 --> mysqli_sql_exception: Not unique table/alias: 'grados' in C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `grados`...', 0)
+#1 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `grados`...')
+#2 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `grados`...')
+#3 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`...', Array, false)
+#4 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\app\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(933): App\Controllers\GradosController->index()
+#6 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+#7 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-08-26 17:33:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'grados'
+[Method: GET, Route: grados]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 2 APPPATH\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GradosController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 17:33:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'grados'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 4 APPPATH\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GradosController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 17:33:03 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'grados'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 5 APPPATH\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GradosController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-26 17:33:52 --> mysqli_sql_exception: Not unique table/alias: 'grados' in C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `grados`...', 0)
+#1 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `grados`...')
+#2 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `grados`...')
+#3 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`...', Array, false)
+#4 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\app\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(933): App\Controllers\GradosController->index()
+#6 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+#7 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-08-26 17:33:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'grados'
+[Method: GET, Route: grados]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 2 APPPATH\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GradosController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 17:33:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'grados'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 4 APPPATH\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GradosController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 17:33:52 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'grados'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 5 APPPATH\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GradosController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-26 17:33:55 --> mysqli_sql_exception: Not unique table/alias: 'grados' in C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `grados`...', 0)
+#1 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `grados`...')
+#2 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `grados`...')
+#3 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`...', Array, false)
+#4 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\app\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(933): App\Controllers\GradosController->index()
+#6 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+#7 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-08-26 17:33:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'grados'
+[Method: GET, Route: grados]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 2 APPPATH\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GradosController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 17:33:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'grados'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 4 APPPATH\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GradosController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 17:33:55 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'grados'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 5 APPPATH\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GradosController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-26 17:34:48 --> mysqli_sql_exception: Not unique table/alias: 'grados' in C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `grados`...', 0)
+#1 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `grados`...')
+#2 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `grados`...')
+#3 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`...', Array, false)
+#4 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\app\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(933): App\Controllers\GradosController->index()
+#6 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+#7 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-08-26 17:34:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'grados'
+[Method: GET, Route: grados]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 2 APPPATH\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GradosController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 17:34:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'grados'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 4 APPPATH\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GradosController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 17:34:48 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'grados'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `grados`.*, `grados`.`nombre` as `grado`
+FROM `grados`
+JOIN `grados` ON `grados`.`codigo_grado` = `grados`.`codigo_grado`', [], false)
+ 5 APPPATH\Controllers\GradosController.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GradosController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 17:37:22 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: GET, Route: grados]
+in APPPATH\Controllers\GradosController.php on line 11.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\fs2025fs\\codeigniter_biblios\\app\\Controllers\\GradosController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\GradosController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\GradosController')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\GradosController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 17:43:10 --> Error: Call to a member function getResult() on array
+[Method: GET, Route: grados]
+in APPPATH\Views\grados.php on line 81.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('grados', [], true)
+ 4 APPPATH\Controllers\GradosController.php(17): view('grados', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GradosController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-26 17:45:07 --> ErrorException: Attempt to read property "codigo_grado" on array
+[Method: GET, Route: grados]
+in APPPATH\Views\grados.php on line 82.
+ 1 APPPATH\Views\grados.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "codigo_grado" on array', 'C:\\xampp\\htdocs\\fs2025fs\\codeigniter_biblios\\app\\Views\\grados.php', 82)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\fs2025fs\\codeigniter_biblios\\app\\Views\\grados.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('grados', [], true)
+ 5 APPPATH\Controllers\GradosController.php(17): view('grados', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GradosController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GradosController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

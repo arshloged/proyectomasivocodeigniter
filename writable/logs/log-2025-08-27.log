@@ -1,0 +1,672 @@
+ERROR - 2025-08-27 15:54:13 --> mysqli_sql_exception: Duplicate entry '2013007' for key 'PRIMARY' in C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `es...', 0)
+#1 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `es...')
+#2 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `es...')
+#3 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `es...', Array, false)
+#4 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\app\Controllers\EstudiantesController.php(41): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(933): App\Controllers\EstudiantesController->agregarEstudiante()
+#9 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+#10 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-08-27 15:54:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2013007' for key 'PRIMARY'
+[Method: POST, Route: agregar_estudiante]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `estudiantes` (`carne_alumno`, `nombre`, `apellido`, `direccion`, `telefono`, `email`, `fechanacimiento`, `codigo_grado`) VALUES (:carne_alumno:, :nombre:, :apellido:, :direccion:, :telefono:, :email:, :fechanacimiento:, :codigo_grado:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\EstudiantesController.php(41): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EstudiantesController->agregarEstudiante()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 15:54:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2013007' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `estudiantes` (`carne_alumno`, `nombre`, `apellido`, `direccion`, `telefono`, `email`, `fechanacimiento`, `codigo_grado`) VALUES (\'2013007\', \'123\', \'\', \'\', \'\', \'\', \'\', \'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `estudiantes` (`carne_alumno`, `nombre`, `apellido`, `direccion`, `telefono`, `email`, `fechanacimiento`, `codigo_grado`) VALUES (\'2013007\', \'123\', \'\', \'\', \'\', \'\', \'\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `estudiantes` (`carne_alumno`, `nombre`, `apellido`, `direccion`, `telefono`, `email`, `fechanacimiento`, `codigo_grado`) VALUES (:carne_alumno:, :nombre:, :apellido:, :direccion:, :telefono:, :email:, :fechanacimiento:, :codigo_grado:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\EstudiantesController.php(41): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EstudiantesController->agregarEstudiante()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 15:54:13 --> [Caused by] mysqli_sql_exception: Duplicate entry '2013007' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `estudiantes` (`carne_alumno`, `nombre`, `apellido`, `direccion`, `telefono`, `email`, `fechanacimiento`, `codigo_grado`) VALUES (\'2013007\', \'123\', \'\', \'\', \'\', \'\', \'\', \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `estudiantes` (`carne_alumno`, `nombre`, `apellido`, `direccion`, `telefono`, `email`, `fechanacimiento`, `codigo_grado`) VALUES (\'2013007\', \'123\', \'\', \'\', \'\', \'\', \'\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `estudiantes` (`carne_alumno`, `nombre`, `apellido`, `direccion`, `telefono`, `email`, `fechanacimiento`, `codigo_grado`) VALUES (\'2013007\', \'123\', \'\', \'\', \'\', \'\', \'\', \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `estudiantes` (`carne_alumno`, `nombre`, `apellido`, `direccion`, `telefono`, `email`, `fechanacimiento`, `codigo_grado`) VALUES (:carne_alumno:, :nombre:, :apellido:, :direccion:, :telefono:, :email:, :fechanacimiento:, :codigo_grado:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\EstudiantesController.php(41): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EstudiantesController->agregarEstudiante()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 16:01:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "prestamos/prestamos.php"
+[Method: GET, Route: prestamos]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('prestamos/prestamos.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('prestamos/prestamos', [], true)
+ 3 APPPATH\Controllers\PrestamosController.php(26): view('prestamos/prestamos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PrestamosController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrestamosController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 16:03:47 --> ErrorException: Undefined array key "codigo_prestamo"
+[Method: GET, Route: prestamos]
+in APPPATH\Views\prestamos.php on line 29.
+ 1 APPPATH\Views\prestamos.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "codigo_prestamo"', 'C:\\xampp\\htdocs\\fs2025fs\\codeigniter_biblios\\app\\Views\\prestamos.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\fs2025fs\\codeigniter_biblios\\app\\Views\\prestamos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('prestamos', [], true)
+ 5 APPPATH\Controllers\PrestamosController.php(26): view('prestamos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PrestamosController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrestamosController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 16:03:58 --> ErrorException: Undefined array key "codigo_prestamo"
+[Method: GET, Route: prestamos]
+in APPPATH\Views\prestamos.php on line 29.
+ 1 APPPATH\Views\prestamos.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "codigo_prestamo"', 'C:\\xampp\\htdocs\\fs2025fs\\codeigniter_biblios\\app\\Views\\prestamos.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\fs2025fs\\codeigniter_biblios\\app\\Views\\prestamos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('prestamos', [], true)
+ 5 APPPATH\Controllers\PrestamosController.php(26): view('prestamos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PrestamosController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrestamosController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 16:04:54 --> ErrorException: Attempt to read property "codigo_prestamo" on array
+[Method: GET, Route: prestamos]
+in APPPATH\Views\prestamos.php on line 29.
+ 1 APPPATH\Views\prestamos.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "codigo_prestamo" on array', 'C:\\xampp\\htdocs\\fs2025fs\\codeigniter_biblios\\app\\Views\\prestamos.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\fs2025fs\\codeigniter_biblios\\app\\Views\\prestamos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('prestamos', [], true)
+ 5 APPPATH\Controllers\PrestamosController.php(26): view('prestamos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PrestamosController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrestamosController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 16:06:16 --> ErrorException: Undefined array key "codigo_prestamo"
+[Method: GET, Route: prestamos]
+in APPPATH\Views\prestamos.php on line 36.
+ 1 APPPATH\Views\prestamos.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "codigo_prestamo"', 'C:\\xampp\\htdocs\\fs2025fs\\codeigniter_biblios\\app\\Views\\prestamos.php', 36)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\fs2025fs\\codeigniter_biblios\\app\\Views\\prestamos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('prestamos', [], true)
+ 5 APPPATH\Controllers\PrestamosController.php(26): view('prestamos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PrestamosController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrestamosController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 16:06:49 --> Error: Class "App\Models\EmpleadosModel" not found
+[Method: GET, Route: prestamos/editar/2]
+in APPPATH\Controllers\PrestamosController.php on line 66.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PrestamosController->editarPrestamo('2')
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrestamosController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-27 16:07:06 --> mysqli_sql_exception: Unknown column 'codigo_prestamo' in 'where clause' in C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php(327): mysqli->query('DELETE FROM `pr...', 0)
+#1 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `pr...')
+#2 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `pr...')
+#3 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `pr...', Array, false)
+#4 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\BaseModel.php(1152): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\app\Controllers\PrestamosController.php(101): CodeIgniter\BaseModel->delete(Array)
+#7 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(933): App\Controllers\PrestamosController->eliminarPrestamo('2')
+#8 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrestamosController))
+#9 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-08-27 16:07:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'codigo_prestamo' in 'where clause'
+[Method: GET, Route: prestamos/eliminar/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `prestamos`
+WHERE `codigo_prestamo` IN :codigo_prestamo:', [...], false)
+ 2 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1152): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\PrestamosController.php(101): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PrestamosController->eliminarPrestamo('2')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrestamosController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 16:07:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'codigo_prestamo' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `prestamos`
+WHERE `codigo_prestamo` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `prestamos`
+WHERE `codigo_prestamo` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `prestamos`
+WHERE `codigo_prestamo` IN :codigo_prestamo:', [...], false)
+ 4 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1152): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\PrestamosController.php(101): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PrestamosController->eliminarPrestamo('2')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrestamosController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 16:07:06 --> [Caused by] mysqli_sql_exception: Unknown column 'codigo_prestamo' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('DELETE FROM `prestamos`
+WHERE `codigo_prestamo` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `prestamos`
+WHERE `codigo_prestamo` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `prestamos`
+WHERE `codigo_prestamo` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `prestamos`
+WHERE `codigo_prestamo` IN :codigo_prestamo:', [...], false)
+ 5 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1152): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\PrestamosController.php(101): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PrestamosController->eliminarPrestamo('2')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrestamosController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 16:12:19 --> ParseError: syntax error, unexpected variable "$prestamosModel", expecting ";" or "{"
+[Method: GET, Route: prestamos]
+in APPPATH\Controllers\PrestamosController.php on line 58.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\fs2025fs\\codeigniter_biblios\\app\\Controllers\\PrestamosController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\PrestamosController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\PrestamosController')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\PrestamosController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 16:13:08 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "prestamos/prestamos.php"
+[Method: GET, Route: prestamos]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('prestamos/prestamos.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('prestamos/prestamos', [], true)
+ 3 APPPATH\Controllers\PrestamosController.php(24): view('prestamos/prestamos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PrestamosController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrestamosController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 16:13:15 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "prestamos/prestamos.php"
+[Method: GET, Route: prestamos]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('prestamos/prestamos.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('prestamos/prestamos', [], true)
+ 3 APPPATH\Controllers\PrestamosController.php(24): view('prestamos/prestamos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PrestamosController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrestamosController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 16:14:15 --> Error: Class "App\Models\EmpleadosModel" not found
+[Method: GET, Route: prestamos/editar/48]
+in APPPATH\Controllers\PrestamosController.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PrestamosController->editarPrestamo('48')
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrestamosController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 16:16:28 --> Error: Class "App\Models\EmpleadosModel" not found
+[Method: GET, Route: prestamos/editar/48]
+in APPPATH\Controllers\PrestamosController.php on line 62.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PrestamosController->editarPrestamo('48')
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrestamosController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 16:17:10 --> Error: Class "App\Models\LibrosModel" not found
+[Method: GET, Route: prestamos/editar/48]
+in APPPATH\Controllers\PrestamosController.php on line 63.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PrestamosController->editarPrestamo('48')
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrestamosController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 16:17:58 --> ErrorException: Undefined array key "observaciones"
+[Method: GET, Route: prestamos/editar/48]
+in APPPATH\Views\prestamos_editar.php on line 62.
+ 1 APPPATH\Views\prestamos_editar.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "observaciones"', 'C:\\xampp\\htdocs\\fs2025fs\\codeigniter_biblios\\app\\Views\\prestamos_editar.php', 62)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\fs2025fs\\codeigniter_biblios\\app\\Views\\prestamos_editar.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('prestamos_editar', [], true)
+ 5 APPPATH\Controllers\PrestamosController.php(70): view('prestamos_editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PrestamosController->editarPrestamo('48')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrestamosController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-27 16:18:52 --> mysqli_sql_exception: Unknown column 'observaciones' in 'field list' in C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `prestam...', 0)
+#1 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `prestam...')
+#2 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `prestam...')
+#3 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `prestam...', Array, false)
+#4 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\BaseModel.php(1025): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Model.php(860): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\app\Controllers\PrestamosController.php(88): CodeIgniter\Model->update('48', Array)
+#8 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(933): App\Controllers\PrestamosController->actualizarPrestamo()
+#9 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrestamosController))
+#10 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-08-27 16:18:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'observaciones' in 'field list'
+[Method: POST, Route: prestamos/actualizar]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `prestamos` SET `codigo_empleado` = :codigo_empleado:, `carne_alumno` = :carne_alumno:, `codigo_libro` = :codigo_libro:, `fecha_prestamo` = :fecha_prestamo:, `fecha_devolucion` = :fecha_devolucion:, `observaciones` = :observaciones:
+WHERE `prestamos`.`numero_prestamo` IN :prestamos.numero_prestamo:', [...], false)
+ 2 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\PrestamosController.php(88): CodeIgniter\Model->update('48', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PrestamosController->actualizarPrestamo()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrestamosController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 16:18:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'observaciones' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `prestamos` SET `codigo_empleado` = \'1001\', `carne_alumno` = \'2013126\', `codigo_libro` = \'100153\', `fecha_prestamo` = \'2018-11-30\', `fecha_devolucion` = \'2018-12-03\', `observaciones` = NULL
+WHERE `prestamos`.`numero_prestamo` IN (\'48\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `prestamos` SET `codigo_empleado` = \'1001\', `carne_alumno` = \'2013126\', `codigo_libro` = \'100153\', `fecha_prestamo` = \'2018-11-30\', `fecha_devolucion` = \'2018-12-03\', `observaciones` = NULL
+WHERE `prestamos`.`numero_prestamo` IN (\'48\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `prestamos` SET `codigo_empleado` = :codigo_empleado:, `carne_alumno` = :carne_alumno:, `codigo_libro` = :codigo_libro:, `fecha_prestamo` = :fecha_prestamo:, `fecha_devolucion` = :fecha_devolucion:, `observaciones` = :observaciones:
+WHERE `prestamos`.`numero_prestamo` IN :prestamos.numero_prestamo:', [...], false)
+ 4 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\PrestamosController.php(88): CodeIgniter\Model->update('48', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PrestamosController->actualizarPrestamo()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrestamosController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 16:18:52 --> [Caused by] mysqli_sql_exception: Unknown column 'observaciones' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `prestamos` SET `codigo_empleado` = \'1001\', `carne_alumno` = \'2013126\', `codigo_libro` = \'100153\', `fecha_prestamo` = \'2018-11-30\', `fecha_devolucion` = \'2018-12-03\', `observaciones` = NULL
+WHERE `prestamos`.`numero_prestamo` IN (\'48\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `prestamos` SET `codigo_empleado` = \'1001\', `carne_alumno` = \'2013126\', `codigo_libro` = \'100153\', `fecha_prestamo` = \'2018-11-30\', `fecha_devolucion` = \'2018-12-03\', `observaciones` = NULL
+WHERE `prestamos`.`numero_prestamo` IN (\'48\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `prestamos` SET `codigo_empleado` = \'1001\', `carne_alumno` = \'2013126\', `codigo_libro` = \'100153\', `fecha_prestamo` = \'2018-11-30\', `fecha_devolucion` = \'2018-12-03\', `observaciones` = NULL
+WHERE `prestamos`.`numero_prestamo` IN (\'48\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `prestamos` SET `codigo_empleado` = :codigo_empleado:, `carne_alumno` = :carne_alumno:, `codigo_libro` = :codigo_libro:, `fecha_prestamo` = :fecha_prestamo:, `fecha_devolucion` = :fecha_devolucion:, `observaciones` = :observaciones:
+WHERE `prestamos`.`numero_prestamo` IN :prestamos.numero_prestamo:', [...], false)
+ 5 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\PrestamosController.php(88): CodeIgniter\Model->update('48', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PrestamosController->actualizarPrestamo()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrestamosController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-27 16:28:55 --> mysqli_sql_exception: Unknown column 'estados.descripcion' in 'field list' in C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `libros`...', 0)
+#1 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `libros`...')
+#2 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `libros`...')
+#3 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `libros`...', Array, false)
+#4 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\app\Controllers\LibrosController.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(933): App\Controllers\LibrosController->index()
+#8 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+#9 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-08-27 16:28:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'estados.descripcion' in 'field list'
+[Method: GET, Route: libros]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `libros`.*, `autores`.`nombre` as `nombre_autor`, `editoriales`.`nombre` as `nombre_editorial`, `estados`.`descripcion` as `descripcion_estado`
+FROM `libros`
+JOIN `autores` ON `autores`.`codigo_autor` = `libros`.`codigo_autor`
+JOIN `editoriales` ON `editoriales`.`codigo_editorial` = `libros`.`codigo_editorial`
+JOIN `estados` ON `estados`.`codigo_estado` = `libros`.`estado`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\LibrosController.php(21): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LibrosController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 16:28:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'estados.descripcion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `libros`.*, `autores`.`nombre` as `nombre_autor`, `editoriales`.`nombre` as `nombre_editorial`, `estados`.`descripcion` as `descripcion_estado`
+FROM `libros`
+JOIN `autores` ON `autores`.`codigo_autor` = `libros`.`codigo_autor`
+JOIN `editoriales` ON `editoriales`.`codigo_editorial` = `libros`.`codigo_editorial`
+JOIN `estados` ON `estados`.`codigo_estado` = `libros`.`estado`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `libros`.*, `autores`.`nombre` as `nombre_autor`, `editoriales`.`nombre` as `nombre_editorial`, `estados`.`descripcion` as `descripcion_estado`
+FROM `libros`
+JOIN `autores` ON `autores`.`codigo_autor` = `libros`.`codigo_autor`
+JOIN `editoriales` ON `editoriales`.`codigo_editorial` = `libros`.`codigo_editorial`
+JOIN `estados` ON `estados`.`codigo_estado` = `libros`.`estado`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `libros`.*, `autores`.`nombre` as `nombre_autor`, `editoriales`.`nombre` as `nombre_editorial`, `estados`.`descripcion` as `descripcion_estado`
+FROM `libros`
+JOIN `autores` ON `autores`.`codigo_autor` = `libros`.`codigo_autor`
+JOIN `editoriales` ON `editoriales`.`codigo_editorial` = `libros`.`codigo_editorial`
+JOIN `estados` ON `estados`.`codigo_estado` = `libros`.`estado`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\LibrosController.php(21): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LibrosController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 16:28:55 --> [Caused by] mysqli_sql_exception: Unknown column 'estados.descripcion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `libros`.*, `autores`.`nombre` as `nombre_autor`, `editoriales`.`nombre` as `nombre_editorial`, `estados`.`descripcion` as `descripcion_estado`
+FROM `libros`
+JOIN `autores` ON `autores`.`codigo_autor` = `libros`.`codigo_autor`
+JOIN `editoriales` ON `editoriales`.`codigo_editorial` = `libros`.`codigo_editorial`
+JOIN `estados` ON `estados`.`codigo_estado` = `libros`.`estado`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `libros`.*, `autores`.`nombre` as `nombre_autor`, `editoriales`.`nombre` as `nombre_editorial`, `estados`.`descripcion` as `descripcion_estado`
+FROM `libros`
+JOIN `autores` ON `autores`.`codigo_autor` = `libros`.`codigo_autor`
+JOIN `editoriales` ON `editoriales`.`codigo_editorial` = `libros`.`codigo_editorial`
+JOIN `estados` ON `estados`.`codigo_estado` = `libros`.`estado`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `libros`.*, `autores`.`nombre` as `nombre_autor`, `editoriales`.`nombre` as `nombre_editorial`, `estados`.`descripcion` as `descripcion_estado`
+FROM `libros`
+JOIN `autores` ON `autores`.`codigo_autor` = `libros`.`codigo_autor`
+JOIN `editoriales` ON `editoriales`.`codigo_editorial` = `libros`.`codigo_editorial`
+JOIN `estados` ON `estados`.`codigo_estado` = `libros`.`estado`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `libros`.*, `autores`.`nombre` as `nombre_autor`, `editoriales`.`nombre` as `nombre_editorial`, `estados`.`descripcion` as `descripcion_estado`
+FROM `libros`
+JOIN `autores` ON `autores`.`codigo_autor` = `libros`.`codigo_autor`
+JOIN `editoriales` ON `editoriales`.`codigo_editorial` = `libros`.`codigo_editorial`
+JOIN `estados` ON `estados`.`codigo_estado` = `libros`.`estado`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\LibrosController.php(21): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LibrosController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-27 16:32:42 --> mysqli_sql_exception: Unknown column 'estados.descripcion' in 'field list' in C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `libros`...', 0)
+#1 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `libros`...')
+#2 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `libros`...')
+#3 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `libros`...', Array, false)
+#4 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\app\Controllers\LibrosController.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(933): App\Controllers\LibrosController->index()
+#8 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+#9 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-08-27 16:32:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'estados.descripcion' in 'field list'
+[Method: GET, Route: libros]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `libros`.*, `autores`.`nombre` as `nombre_autor`, `editoriales`.`nombre` as `nombre_editorial`, `estados`.`descripcion` as `descripcion_estado`
+FROM `libros`
+JOIN `autores` ON `autores`.`codigo_autor` = `libros`.`codigo_autor`
+JOIN `editoriales` ON `editoriales`.`codigo_editorial` = `libros`.`codigo_editorial`
+JOIN `estados` ON `estados`.`codigo_estado` = `libros`.`estado`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\LibrosController.php(21): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LibrosController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 16:32:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'estados.descripcion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `libros`.*, `autores`.`nombre` as `nombre_autor`, `editoriales`.`nombre` as `nombre_editorial`, `estados`.`descripcion` as `descripcion_estado`
+FROM `libros`
+JOIN `autores` ON `autores`.`codigo_autor` = `libros`.`codigo_autor`
+JOIN `editoriales` ON `editoriales`.`codigo_editorial` = `libros`.`codigo_editorial`
+JOIN `estados` ON `estados`.`codigo_estado` = `libros`.`estado`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `libros`.*, `autores`.`nombre` as `nombre_autor`, `editoriales`.`nombre` as `nombre_editorial`, `estados`.`descripcion` as `descripcion_estado`
+FROM `libros`
+JOIN `autores` ON `autores`.`codigo_autor` = `libros`.`codigo_autor`
+JOIN `editoriales` ON `editoriales`.`codigo_editorial` = `libros`.`codigo_editorial`
+JOIN `estados` ON `estados`.`codigo_estado` = `libros`.`estado`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `libros`.*, `autores`.`nombre` as `nombre_autor`, `editoriales`.`nombre` as `nombre_editorial`, `estados`.`descripcion` as `descripcion_estado`
+FROM `libros`
+JOIN `autores` ON `autores`.`codigo_autor` = `libros`.`codigo_autor`
+JOIN `editoriales` ON `editoriales`.`codigo_editorial` = `libros`.`codigo_editorial`
+JOIN `estados` ON `estados`.`codigo_estado` = `libros`.`estado`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\LibrosController.php(21): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LibrosController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 16:32:42 --> [Caused by] mysqli_sql_exception: Unknown column 'estados.descripcion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `libros`.*, `autores`.`nombre` as `nombre_autor`, `editoriales`.`nombre` as `nombre_editorial`, `estados`.`descripcion` as `descripcion_estado`
+FROM `libros`
+JOIN `autores` ON `autores`.`codigo_autor` = `libros`.`codigo_autor`
+JOIN `editoriales` ON `editoriales`.`codigo_editorial` = `libros`.`codigo_editorial`
+JOIN `estados` ON `estados`.`codigo_estado` = `libros`.`estado`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `libros`.*, `autores`.`nombre` as `nombre_autor`, `editoriales`.`nombre` as `nombre_editorial`, `estados`.`descripcion` as `descripcion_estado`
+FROM `libros`
+JOIN `autores` ON `autores`.`codigo_autor` = `libros`.`codigo_autor`
+JOIN `editoriales` ON `editoriales`.`codigo_editorial` = `libros`.`codigo_editorial`
+JOIN `estados` ON `estados`.`codigo_estado` = `libros`.`estado`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `libros`.*, `autores`.`nombre` as `nombre_autor`, `editoriales`.`nombre` as `nombre_editorial`, `estados`.`descripcion` as `descripcion_estado`
+FROM `libros`
+JOIN `autores` ON `autores`.`codigo_autor` = `libros`.`codigo_autor`
+JOIN `editoriales` ON `editoriales`.`codigo_editorial` = `libros`.`codigo_editorial`
+JOIN `estados` ON `estados`.`codigo_estado` = `libros`.`estado`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `libros`.*, `autores`.`nombre` as `nombre_autor`, `editoriales`.`nombre` as `nombre_editorial`, `estados`.`descripcion` as `descripcion_estado`
+FROM `libros`
+JOIN `autores` ON `autores`.`codigo_autor` = `libros`.`codigo_autor`
+JOIN `editoriales` ON `editoriales`.`codigo_editorial` = `libros`.`codigo_editorial`
+JOIN `estados` ON `estados`.`codigo_estado` = `libros`.`estado`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\LibrosController.php(21): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LibrosController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-27 16:32:45 --> mysqli_sql_exception: Unknown column 'estados.descripcion' in 'field list' in C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `libros`...', 0)
+#1 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `libros`...')
+#2 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `libros`...')
+#3 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `libros`...', Array, false)
+#4 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\app\Controllers\LibrosController.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(933): App\Controllers\LibrosController->index()
+#8 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+#9 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-08-27 16:32:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'estados.descripcion' in 'field list'
+[Method: GET, Route: libros]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `libros`.*, `autores`.`nombre` as `nombre_autor`, `editoriales`.`nombre` as `nombre_editorial`, `estados`.`descripcion` as `descripcion_estado`
+FROM `libros`
+JOIN `autores` ON `autores`.`codigo_autor` = `libros`.`codigo_autor`
+JOIN `editoriales` ON `editoriales`.`codigo_editorial` = `libros`.`codigo_editorial`
+JOIN `estados` ON `estados`.`codigo_estado` = `libros`.`estado`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\LibrosController.php(21): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LibrosController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 16:32:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'estados.descripcion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `libros`.*, `autores`.`nombre` as `nombre_autor`, `editoriales`.`nombre` as `nombre_editorial`, `estados`.`descripcion` as `descripcion_estado`
+FROM `libros`
+JOIN `autores` ON `autores`.`codigo_autor` = `libros`.`codigo_autor`
+JOIN `editoriales` ON `editoriales`.`codigo_editorial` = `libros`.`codigo_editorial`
+JOIN `estados` ON `estados`.`codigo_estado` = `libros`.`estado`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `libros`.*, `autores`.`nombre` as `nombre_autor`, `editoriales`.`nombre` as `nombre_editorial`, `estados`.`descripcion` as `descripcion_estado`
+FROM `libros`
+JOIN `autores` ON `autores`.`codigo_autor` = `libros`.`codigo_autor`
+JOIN `editoriales` ON `editoriales`.`codigo_editorial` = `libros`.`codigo_editorial`
+JOIN `estados` ON `estados`.`codigo_estado` = `libros`.`estado`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `libros`.*, `autores`.`nombre` as `nombre_autor`, `editoriales`.`nombre` as `nombre_editorial`, `estados`.`descripcion` as `descripcion_estado`
+FROM `libros`
+JOIN `autores` ON `autores`.`codigo_autor` = `libros`.`codigo_autor`
+JOIN `editoriales` ON `editoriales`.`codigo_editorial` = `libros`.`codigo_editorial`
+JOIN `estados` ON `estados`.`codigo_estado` = `libros`.`estado`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\LibrosController.php(21): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LibrosController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 16:32:45 --> [Caused by] mysqli_sql_exception: Unknown column 'estados.descripcion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `libros`.*, `autores`.`nombre` as `nombre_autor`, `editoriales`.`nombre` as `nombre_editorial`, `estados`.`descripcion` as `descripcion_estado`
+FROM `libros`
+JOIN `autores` ON `autores`.`codigo_autor` = `libros`.`codigo_autor`
+JOIN `editoriales` ON `editoriales`.`codigo_editorial` = `libros`.`codigo_editorial`
+JOIN `estados` ON `estados`.`codigo_estado` = `libros`.`estado`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `libros`.*, `autores`.`nombre` as `nombre_autor`, `editoriales`.`nombre` as `nombre_editorial`, `estados`.`descripcion` as `descripcion_estado`
+FROM `libros`
+JOIN `autores` ON `autores`.`codigo_autor` = `libros`.`codigo_autor`
+JOIN `editoriales` ON `editoriales`.`codigo_editorial` = `libros`.`codigo_editorial`
+JOIN `estados` ON `estados`.`codigo_estado` = `libros`.`estado`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `libros`.*, `autores`.`nombre` as `nombre_autor`, `editoriales`.`nombre` as `nombre_editorial`, `estados`.`descripcion` as `descripcion_estado`
+FROM `libros`
+JOIN `autores` ON `autores`.`codigo_autor` = `libros`.`codigo_autor`
+JOIN `editoriales` ON `editoriales`.`codigo_editorial` = `libros`.`codigo_editorial`
+JOIN `estados` ON `estados`.`codigo_estado` = `libros`.`estado`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `libros`.*, `autores`.`nombre` as `nombre_autor`, `editoriales`.`nombre` as `nombre_editorial`, `estados`.`descripcion` as `descripcion_estado`
+FROM `libros`
+JOIN `autores` ON `autores`.`codigo_autor` = `libros`.`codigo_autor`
+JOIN `editoriales` ON `editoriales`.`codigo_editorial` = `libros`.`codigo_editorial`
+JOIN `estados` ON `estados`.`codigo_estado` = `libros`.`estado`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\LibrosController.php(21): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LibrosController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 16:34:15 --> ErrorException: Undefined array key "anio_publicacion"
+[Method: GET, Route: libros]
+in APPPATH\Views\libros\libros.php on line 33.
+ 1 APPPATH\Views\libros\libros.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "anio_publicacion"', 'C:\\xampp\\htdocs\\fs2025fs\\codeigniter_biblios\\app\\Views\\libros\\libros.php', 33)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\fs2025fs\\codeigniter_biblios\\app\\Views\\libros\\libros.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('libros/libros', [], true)
+ 5 APPPATH\Controllers\LibrosController.php(25): view('libros/libros', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LibrosController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 16:37:42 --> ErrorException: Attempt to read property "codigo_libro" on array
+[Method: GET, Route: libros]
+in APPPATH\Views\libros\libros.php on line 29.
+ 1 APPPATH\Views\libros\libros.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "codigo_libro" on array', 'C:\\xampp\\htdocs\\fs2025fs\\codeigniter_biblios\\app\\Views\\libros\\libros.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\fs2025fs\\codeigniter_biblios\\app\\Views\\libros\\libros.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('libros/libros', [], true)
+ 5 APPPATH\Controllers\LibrosController.php(25): view('libros/libros', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LibrosController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 17:07:46 --> ParseError: syntax error, unexpected token "}", expecting "," or ";"
+[Method: POST, Route: login]
+in APPPATH\Controllers\EmpleadosController.php on line 22.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\fs2025fs\\codeigniter_biblios\\app\\Controllers\\EmpleadosController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\EmpleadosController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\EmpleadosController')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\EmpleadosController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-27 17:08:06 --> ErrorException: Undefined variable $empleados
+[Method: POST, Route: login]
+in APPPATH\Controllers\EmpleadosController.php on line 16.
+ 1 APPPATH\Controllers\EmpleadosController.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $empleados', 'C:\\xampp\\htdocs\\fs2025fs\\codeigniter_biblios\\app\\Controllers\\EmpleadosController.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpleadosController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadosController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

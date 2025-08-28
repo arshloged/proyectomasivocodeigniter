@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Editar Grado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1>Editar Grado</h1>
+        <hr>
+
+        <form action="<?= route_to('grados_actualizar') ?>" method="post">
+    <?= csrf_field() ?>
+
+    <input type="hidden" name="txt_codigo" value="<?= $grado['codigo_grado']; ?>">
+    
+    <div class="mb-3">
+        <label for="txt_nombre" class="form-label">Nombre del Grado</label>
+        <input type="text" name="txt_nombre" id="txt_nombre" class="form-control" value="<?= $grado['nombre']; ?>">
+    </div>
+    
+    <button type="submit" class="btn btn-success">Guardar Cambios</button>
+    <a href="<?= base_url('grados'); ?>" class="btn btn-secondary">Cancelar</a>
+</form>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+
+</html>

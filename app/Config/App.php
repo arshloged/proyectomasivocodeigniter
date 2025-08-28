@@ -16,7 +16,7 @@ class App extends BaseConfig
      *
      * E.g., http://example.com/
      */
-    public string $baseURL = 'http://localhost/fs2025/ci4_biblioteca2/public/';
+    public string $baseURL = 'http://localhost/fs2025fs/codeigniter_biblios/public/';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
