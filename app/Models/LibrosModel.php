@@ -9,6 +9,7 @@ class LibrosModel extends Model
     protected $table = 'libros';
     protected $primaryKey = 'codigo_libro';
     protected $allowedFields = [
+        'codigo_libro',
         'titulo', 
         'codigo_editorial', 
         'codigo_autor', 
@@ -16,3 +17,4 @@ class LibrosModel extends Model
         'estado'
     ];
 }
+

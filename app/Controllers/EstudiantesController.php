@@ -37,9 +37,23 @@ class EstudiantesController extends BaseController
             'codigo_grado'=>$this->request->getPost('lst_grado'),
         ];
         //print_r ($datos);
-        $estudiante = new EstudiantesModel();
+        //al insertar se puede producir un error
+        try {
+            $estudiante = new EstudiantesModel();
         $estudiante->insert($datos);
-        return redirect()->route('estudiantes');
+        return redirect()->back()->with('agregado','Estudiante registrado');
+        } catch (\Throwable $th) {
+            //echo "llave primaria duplicada";
+            return redirect()->back()->with('error','El carnet ya existe, duh');
+        }
+
+
+        /*$estudiante = new EstudiantesModel();
+        $estudiante->insert($datos);
+        return redirect()->route('estudiantes');*/
+
+
+
     }
     public function buscarEstudiante($carnet){
         //datos estudiantes

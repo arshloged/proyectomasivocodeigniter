@@ -19,8 +19,9 @@
                     <input type="text" name="txt_usuario" id="txt_usuario" class="form-control" placeholder="lindo dia">
 
                     <label for="txt_password" class="form-label">Contraseña</label>
-                    <input type="password" name="txt_password" id="txt_password" class="form-control" placeholder="insegura">
-<br>
+                    <input type="password" name="txt_password" id="txt_password" class="form-control"
+                        placeholder="insegura">
+                    <br>
                     <button type="submit" class="form-control" btn btn-primary mt-2>Iniciar Sezion</button>
 
 
@@ -33,9 +34,21 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<?php if (session()->getFlashdata('errors')): ?>
+<script>
+    Swal.fire({
+        icon: "error",
+        title: "ALTA, DIGO, ALTO!!",
+        text: "<?= session()->getFlashdata('errors') ?>"
+    });
+</script>
+<?php endif; ?>
 
 
 
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
     </script>

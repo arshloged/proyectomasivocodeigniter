@@ -24,11 +24,13 @@ class EmpleadosController extends BaseController
             }elseif($datos['tipo_usuario']==3){
                 $ubicacion="menu_biblio";
             }else{
-                return redirect()->route('/');
+                //return redirect()->route('/');
+                return redirect()->back()->withInput()->with('errors','Usuario sin acceso');
             }
         }else{
             echo ("datos incorrectos");
-            return redirect()->route('/');
+            //return redirect()->route('/');
+            return redirect()->back()->withInput()->with('errors','Datos incorrectos');
         }
         return view($ubicacion);
     }

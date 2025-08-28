@@ -42,8 +42,8 @@
             </div>
             
             <div class="mb-3">
-                <label for="txt_anio" class="form-label">Año de Publicación</label>
-                <input type="number" name="txt_anio" id="txt_anio" class="form-control" value="<?= $libro['anio_publicacion']; ?>">
+                <label for="txt_anio" class="form-label">Precio</label>
+                <input type="number" name="txt_anio" id="txt_anio" class="form-control" value="<?= $libro['precio']; ?>">
             </div>
 
             <div class="mb-3">

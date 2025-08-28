@@ -18,7 +18,7 @@
                     <th>Título</th>
                     <th>Autor</th>
                     <th>Editorial</th>
-                    <th>Año</th>
+                    <th>Precio</th>
                     <th>Estado</th>
                     <th>Acciones</th>
                 </tr>
@@ -26,15 +26,16 @@
             <tbody>
     <?php foreach ($libros as $libro) { ?>
         <tr>
-            <td><?= $libro->codigo_libro; ?></td>
-            <td><?= $libro->titulo; ?></td>
-            <td><?= $libro->nombre_autor; ?></td>
-            <td><?= $libro->nombre_editorial; ?></td>
-            <td><?= $libro->anio_publicacion; ?></td>
-            <td><?= $libro->nombre_estado; ?></td>
+            <td><?= $libro['codigo_libro']; ?></td>
+            <td><?= $libro['titulo']; ?></td>
+            <td><?= $libro['nombre_autor']; ?></td>
+            <td><?= $libro['nombre_editorial']; ?></td>
+            <td><?= $libro['precio']; ?></td>
+            <td><?= $libro['numero_paginas']; ?></td>
             <td>
-                <a href="<?= base_url('libros/editar/'.$libro->codigo_libro); ?>" class="btn btn-info btn-sm">Editar</a>
-                <a href="<?= base_url('libros/eliminar/'.$libro->codigo_libro); ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Está seguro de que desea eliminar este libro?');">Eliminar</a>
+                <a href="<?= base_url('libros/editar/'.$libro['codigo_libro']); ?>" class="btn btn-info btn-sm">Editar</a>
+
+                <a href="<?= base_url('libros/eliminar/'.$libro['codigo_libro']); ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Está seguro de que desea eliminar este libro?');">Eliminar</a>
             </td>
         </tr>
     <?php } ?>

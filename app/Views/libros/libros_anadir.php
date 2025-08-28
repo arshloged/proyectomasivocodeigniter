@@ -37,7 +37,7 @@
             </div>
             
             <div class="mb-3">
-                <label for="txt_anio" class="form-label">Año de Publicación</label>
+                <label for="txt_anio" class="form-label">Precio</label>
                 <input type="number" name="txt_anio" id="txt_anio" class="form-control">
             </div>
 
@@ -45,7 +45,7 @@
                 <label for="lst_estado" class="form-label">Estado</label>
                 <select class="form-select" name="lst_estado" id="lst_estado">
                     <?php foreach ($estados as $estado) { ?>
-                        <option value="<?= $estado['codigo_estado']; ?>"><?= $estado['descripcion']; ?></option>
+                        <option value="<?= $estado['codigo_estado']; ?>"><?= $estado['nombre']; ?></option>
                     <?php } ?>
                 </select>
             </div>
