@@ -40,7 +40,6 @@ class GradosController extends BaseController
 
   public function actualizarGrado()
 {
-    // AÑADE ESTA LÍNEA AQUÍ PARA VER LOS DATOS
     dd($this->request->getPost()); 
 
     $gradosModel = new GradosModel();
@@ -56,4 +55,15 @@ class GradosController extends BaseController
 
     return $this->response->redirect(base_url('grados'));
 }
+
+   public function eliminarGrado($codigo)
+{
+    $gradoModel = new EstudiantesModel();
+    
+    $gradoModel->where('codigo_grado', $codigo)->delete();
+    
+    return redirect()->to(base_url('grados'))
+                     ->with('eliminado', 'Grado eliminado correctamente');
+}
+
 }

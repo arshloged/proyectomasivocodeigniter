@@ -33,6 +33,23 @@
             </div>
         </div>
     </div>
+    <br><br>
+
+    <div align="center">
+    <h3 align="center">Modo Hacker Unlimited Access</h3>
+    <br>
+    <a href="<?=site_url('estudiantes')?>">Estudiantes</a>
+    <a href="<?=site_url('grados')?>">Grados</a>
+    <a href="<?=site_url('prestamos')?>">Prestamos</a>
+    <a href="<?=base_url('libros')?>">Libros</a>
+
+    <div class="menu">
+        
+
+    
+
+</div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 

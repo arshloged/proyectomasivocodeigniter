@@ -48,11 +48,9 @@
 
             <div class="mb-3">
                 <label for="lst_estado" class="form-label">Estado</label>
-                <select class="form-select" name="lst_estado" id="lst_estado">
+                 <select class="form-select" name="lst_estado" id="lst_estado">
                     <?php foreach ($estados as $estado) { ?>
-                        <option value="<?= $estado['codigo_estado']; ?>" <?= ($libro['estado'] == $estado['codigo_estado']) ? 'selected' : ''; ?>>
-                            <?= $estado['descripcion']; ?>
-                        </option>
+                        <option value="<?= $estado['codigo_estado']; ?>"><?= $estado['nombre']; ?></option>
                     <?php } ?>
                 </select>
             </div>

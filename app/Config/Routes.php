@@ -9,9 +9,13 @@ $routes->get('/', 'Home::index');
 $routes->get('estudiantes','EstudiantesController::index');
 $routes->post('agregar_estudiante','EstudiantesController::agregarEstudiante');
 $routes->get('buscar_estudiante/(:num)','EstudiantesController::buscarEstudiante/$1');
+$routes->get('estudiantes/eliminar/(:segment)', 'EstudiantesController::eliminarEstudiante/$1');
+
 
 $routes->get('grados','GradosController::index');
 $routes->get('buscar_grados/(:num)','GradosController::buscarGrados/$1');
+$routes->get('grados/eliminar/(:segment)', 'GradosController::eliminarGrado/$1');
+
 
 // Rutas para la funcionalidad de actualizar
 $routes->get('editar/(:num)','GradosController::editarGrado/$1');

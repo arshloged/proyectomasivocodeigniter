@@ -8,7 +8,6 @@ class EstudiantesController extends BaseController
 {
     public function index(): string
     {
-        //crear un objeto de tipo EstudiantesModel
         $estudiantes = new EstudiantesModel();
         
         $db=\Config\Database::connect();
@@ -19,7 +18,6 @@ class EstudiantesController extends BaseController
 
         $datos['datosEstudiantes']=$query;
 
-        //crear un objeto de tipo GradoModel
         $grados = new GradosModel();
         $datos['datosGrados']=$grados->findAll();
         
@@ -36,14 +34,12 @@ class EstudiantesController extends BaseController
             'fechanacimiento'=>$this->request->getPost('txt_fecha_nac'),
             'codigo_grado'=>$this->request->getPost('lst_grado'),
         ];
-        //print_r ($datos);
-        //al insertar se puede producir un error
+   
         try {
             $estudiante = new EstudiantesModel();
         $estudiante->insert($datos);
         return redirect()->back()->with('agregado','Estudiante registrado');
         } catch (\Throwable $th) {
-            //echo "llave primaria duplicada";
             return redirect()->back()->with('error','El carnet ya existe, duh');
         }
 
@@ -56,15 +52,24 @@ class EstudiantesController extends BaseController
 
     }
     public function buscarEstudiante($carnet){
-        //datos estudiantes
         $estudiante = new EstudiantesModel();
         $datos['datosEstudiante']=$estudiante->where('carne_alumno', $carnet)->first();
-        //datos grados
-        //crear un objeto de tipo GradoModel
+      
         $grados = new GradosModel();
         $datos['datosGrados']=$grados->findAll();
         
         return view('from_modificar_estudiante',$datos);
 
     }
+
+      public function eliminarEstudiante($carnet)
+{
+    $estudianteModel = new EstudiantesModel();
+    
+    $estudianteModel->where('carne_alumno', $carnet)->delete();
+    
+    return redirect()->to(base_url('estudiantes'))
+                     ->with('eliminado', 'Estudiante eliminado correctamente');
+}
+
 }

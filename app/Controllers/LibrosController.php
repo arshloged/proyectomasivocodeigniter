@@ -8,7 +8,6 @@ use App\Models\EstadosModel;
 
 class LibrosController extends BaseController
 {
-    // Muestra la lista de libros
     public function index()
     {
         $librosModel = new LibrosModel();
@@ -25,7 +24,6 @@ class LibrosController extends BaseController
         return view('libros/libros', $datos);
     }
     
-    // Muestra el formulario para añadir un nuevo libro
     public function anadirLibro()
     {
         $editorialesModel = new EditorialesModel();
@@ -39,7 +37,6 @@ class LibrosController extends BaseController
         return view('libros/libros_anadir', $datos);
     }
 
-    // Procesa el formulario para guardar un nuevo libro
     public function guardarLibro()
     {
         $librosModel = new LibrosModel();
@@ -56,7 +53,6 @@ class LibrosController extends BaseController
         return redirect()->to(base_url('libros'));
     }
 
-    // Muestra el formulario para editar un libro
     public function editarLibro($codigo)
     {
         $librosModel = new LibrosModel();
@@ -72,7 +68,6 @@ class LibrosController extends BaseController
         return view('libros/libros_editar', $datos);
     }
 
-    // Procesa el formulario para actualizar un libro
     public function actualizarLibro()
     {
         $librosModel = new LibrosModel();
@@ -91,7 +86,6 @@ class LibrosController extends BaseController
         return redirect()->to(base_url('libros'));
     }
 
-    // Elimina un libro
     public function eliminarLibro($codigo)
     {
         $librosModel = new LibrosModel();

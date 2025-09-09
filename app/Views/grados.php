@@ -62,6 +62,14 @@
             <td> <?= $gradoss['nombre']; ?> </td>
             <td>
               <a href="<?= base_url('editar/').$gradoss['codigo_grado']; ?>" class="btn btn-info">Actualizar</a>
+
+              <a href="<?= base_url('grados/eliminar/'.$gradoss['codigo_grado']); ?>" 
+   class="btn btn-danger btn-sm" 
+   onclick="return confirm('¿Está seguro de que desea eliminar este grado?');">
+   Eliminar
+</a>
+
+
             </td>
         </tr>
     <?php } ?>

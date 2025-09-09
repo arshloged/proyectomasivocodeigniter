@@ -90,6 +90,13 @@
                     <td> <?=$estudiante->grado;?> </td>
                     <td>
                         <a href="<?=base_url('buscar_estudiante/').$estudiante->carne_alumno;?>" class="btn btn-info">Actualizar</a>
+                      
+                        <a href="<?= base_url('estudiantes/eliminar/'.$estudiante->carne_alumno); ?>" 
+   class="btn btn-danger btn-sm" 
+   onclick="return confirm('¿Está seguro de que desea eliminar este estudiante?');">
+   Eliminar
+</a>
+
                     </td>
                 </tr>
                 <?php 
