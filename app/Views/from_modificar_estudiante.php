@@ -11,25 +11,26 @@
 
 <body>
     <div class="container">
-        <h1>Modificar Estudiante</h1>
+        <h1>Editación de  Estudiante</h1>
 
-        <form action="<?=base_url('agregar_estudiante');?>" method="post">
-            <label for="txt_carnet" class="form-label">Carné</label>
+        <form action="<?=base_url('editazionbonita');?>" method="post">
+            <input type="hidden" name="id" value="<?= $datosEstudiante['carne_alumno']; ?>">
+            <label for="txt_carnet" class="form-label" >Carné</label>
             <input type="numbre" name="txt_carnet" id="txt_carnet" class="form-control" value="<?=$datosEstudiante['carne_alumno'];?>">
             <label for="txt_nombre" class="form-label">Nombre</label>
-            <input type="text" name="txt_nombre" id="txt_nombre" class="form-control">
+            <input type="text" name="txt_nombre" id="txt_nombre" class="form-control" value="<?=$datosEstudiante['nombre'];?>" >
             <label for="txt_apellido" class="form-label">Apellido</label>
-            <input type="text" name="txt_apellido" id="txt_apellido" class="form-control">
+            <input type="text" name="txt_apellido" id="txt_apellido" class="form-control" value="<?=$datosEstudiante['apellido'];?>">
             <label for="txt_direccion" class="form-label">Dirección</label>
-            <input type="text" name="txt_direccion" id="txt_direccion" class="form-control">
+            <input type="text" name="txt_direccion" id="txt_direccion" class="form-control" value="<?=$datosEstudiante['direccion'];?>">
             <label for="txt_telefono" class="form-label">Teléfono</label>
-            <input type="number" name="txt_telefono" id="txt_telefono" class="form-control">
+            <input type="number" name="txt_telefono" id="txt_telefono" class="form-control" value="<?=$datosEstudiante['telefono']?>">
             <label for="txt_email" class="form-label">Correo electrónico</label>
-            <input type="email" name="txt_email" id="txt_email" class="form-control">
+            <input type="email" name="txt_email" id="txt_email" class="form-control" value="<?=$datosEstudiante['email']?>">
             <label for="txt_fecha_nac" class="form-label"></label>
-            <input type="date" name="txt_fecha_nac" id="txt_fecha_nac" class="form-control">
+            <input type="date" name="txt_fecha_nac" id="txt_fecha_nac" class="form-control" value="<?=$datosEstudiante['fechanacimiento']?>">
             <label for="" class="form-label">Grado</label>
-            <select class="form-select" name="lst_grado" id="lst_grado">
+            <select class="form-select" name="lst_grado" id="lst_grado" value="<?=$datosEstudiante['codigo_grado']?>">
             
                 <?php foreach ($datosGrados as $grado) {
                     if ($datosEstudiante['codigo_grado']==$grado['codigo_grado']) {
@@ -49,7 +50,7 @@
                 ?>
 
                 <?php
-                    }//end for
+                    }
                 ?>
             </select>
             <button type="submit" class="form-control btn btn-primary mt-2">Guardar</button>

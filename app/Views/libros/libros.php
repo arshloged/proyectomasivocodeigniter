@@ -8,11 +8,13 @@
 </head>
 <body>
     <div class="container mt-5">
+        <div class="d-flex justify-content-between align-items-center mb-3">
         <h1>Gestión de Libros</h1>
-        <a href="<?= base_url('libros/anadir'); ?>" class="btn btn-primary mb-3">Añadir Libro</a>
+        <a href="<?= base_url('libros/anadir'); ?>" class="btn btn-success" >+ Añadir Libro</a>
+</div>
 
-        <table class="table table-striped table-bordered">
-            <thead>
+        <table class="table table-bordered table-striped table-hover">
+    <thead class="table-dark">
                 <tr>
                     <th>Código</th>
                     <th>Título</th>
@@ -31,9 +33,9 @@
             <td><?= $libro['nombre_autor']; ?></td>
             <td><?= $libro['nombre_editorial']; ?></td>
             <td><?= $libro['precio']; ?></td>
-            <td><?= $libro['numero_paginas']; ?></td>
+            <td><?= $libro['nombre_estado']; ?></td>
             <td>
-                <a href="<?= base_url('libros/editar/'.$libro['codigo_libro']); ?>" class="btn btn-info btn-sm">Editar</a>
+                <a href="<?= base_url('libros/editar_libro/'.$libro['codigo_libro']); ?>" class="btn btn-info btn-sm">Editar</a>
 
                 <a href="<?= base_url('libros/eliminar/'.$libro['codigo_libro']); ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Está seguro de que desea eliminar este libro?');">Eliminar</a>
             </td>

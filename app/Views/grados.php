@@ -11,12 +11,14 @@
 
 <body>
     <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
         <h1>Grados</h1>
 
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Agregar grado
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            + Agregar grado
         </button>
+</div>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -46,8 +48,8 @@
 
 
 
-        <table class="table">
-            <thead>
+        <table class="table table-bordered table-striped table-hover">
+    <thead class="table-dark">
                 <tr>
                     <th>Grados</th>
                     <th>Nombre</th>
@@ -61,7 +63,7 @@
             <td> <?= $gradoss['codigo_grado']; ?> </td>
             <td> <?= $gradoss['nombre']; ?> </td>
             <td>
-              <a href="<?= base_url('editar/').$gradoss['codigo_grado']; ?>" class="btn btn-info">Actualizar</a>
+              <a href="<?= base_url('editar/').$gradoss['codigo_grado']; ?>" class="btn btn-sm btn-info">Actualizar</a>
 
               <a href="<?= base_url('grados/eliminar/'.$gradoss['codigo_grado']); ?>" 
    class="btn btn-danger btn-sm" 

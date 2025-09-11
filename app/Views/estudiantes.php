@@ -11,12 +11,14 @@
 
 <body>
     <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
         <h1>Estudiantes</h1>
 
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Agregar estudiante
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            +Agregar estudiante
         </button>
+</div>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -58,8 +60,8 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar esto</button>
+                        
                     </div>
                 </div>
             </div>
@@ -67,8 +69,8 @@
 
 
 
-        <table class="table">
-            <thead>
+        <table class="table table-bordered table-striped table-hover">
+    <thead class="table-dark">
                 <tr>
                     <th>Carnet</th>
                     <th>Nombre</th>
@@ -89,7 +91,7 @@
                     <td> <?=$estudiante->telefono;?></td>
                     <td> <?=$estudiante->grado;?> </td>
                     <td>
-                        <a href="<?=base_url('buscar_estudiante/').$estudiante->carne_alumno;?>" class="btn btn-info">Actualizar</a>
+                        <a href="<?=base_url('buscar_estudiante/').$estudiante->carne_alumno;?>" class="btn btn-sm btn-info">Actualizar</a>
                       
                         <a href="<?= base_url('estudiantes/eliminar/'.$estudiante->carne_alumno); ?>" 
    class="btn btn-danger btn-sm" 

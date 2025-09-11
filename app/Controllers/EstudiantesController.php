@@ -38,10 +38,37 @@ class EstudiantesController extends BaseController
         try {
             $estudiante = new EstudiantesModel();
         $estudiante->insert($datos);
-        return redirect()->back()->with('agregado','Estudiante registrado');
+        return redirect()->back()->with('agregado','Estudiantin registradin');
         } catch (\Throwable $th) {
             return redirect()->back()->with('error','El carnet ya existe, duh');
         }
+    }
+
+    public function editarEstudiante($id){
+
+        $id = $this->request->getPost('id');
+        
+        $datos=[
+            'carne_alumno'=>$this->request->getPost('txt_carnet'),
+            'nombre'=>$this->request->getPost('txt_nombre'),
+            'apellido'=>$this->request->getPost('txt_apellido'),
+            'direccion'=>$this->request->getPost('txt_direccion'),
+            'telefono'=>$this->request->getPost('txt_telefono'),
+            'email'=>$this->request->getPost('txt_email'),
+            'fechanacimiento'=>$this->request->getPost('txt_fecha_nac'),
+            'codigo_grado'=>$this->request->getPost('lst_grado')
+        ];
+
+        try {
+            $estudiante = new EstudiantesModel();
+            $estudiante->update($id, $datos);
+            return redirect()->to(base_url('estudiantes'))->with('agregado','Estudiantin Actualizadin');
+        }catch (\Throwable $hh) {
+            return redirect()->back()->with('error','error tremendo de usuario');
+        }
+
+
+    }
 
 
         /*$estudiante = new EstudiantesModel();
@@ -50,7 +77,7 @@ class EstudiantesController extends BaseController
 
 
 
-    }
+    
     public function buscarEstudiante($carnet){
         $estudiante = new EstudiantesModel();
         $datos['datosEstudiante']=$estudiante->where('carne_alumno', $carnet)->first();

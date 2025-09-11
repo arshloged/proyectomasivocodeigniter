@@ -45,7 +45,7 @@ class LibrosController extends BaseController
             'titulo' => $this->request->getPost('txt_titulo'),
             'codigo_editorial' => $this->request->getPost('lst_editorial'),
             'codigo_autor' => $this->request->getPost('lst_autor'),
-            'anio_publicacion' => $this->request->getPost('txt_anio'),
+            'precio' => $this->request->getPost('txt_precio'),
             'estado' => $this->request->getPost('lst_estado')
         ];
 
@@ -53,7 +53,7 @@ class LibrosController extends BaseController
         return redirect()->to(base_url('libros'));
     }
 
-    public function editarLibro($codigo)
+   public function editarLibro($codigo)
     {
         $librosModel = new LibrosModel();
         $editorialesModel = new EditorialesModel();
@@ -63,12 +63,13 @@ class LibrosController extends BaseController
         $datos['libro'] = $librosModel->find($codigo);
         $datos['editoriales'] = $editorialesModel->findAll();
         $datos['autores'] = $autoresModel->findAll();
+        $datos['precio'] = $librosModel->findAll();
         $datos['estados'] = $estadosModel->findAll();
 
         return view('libros/libros_editar', $datos);
     }
 
-    public function actualizarLibro()
+    public function actualizarLibro($codigo)
     {
         $librosModel = new LibrosModel();
         
@@ -78,7 +79,7 @@ class LibrosController extends BaseController
             'titulo' => $this->request->getPost('txt_titulo'),
             'codigo_editorial' => $this->request->getPost('lst_editorial'),
             'codigo_autor' => $this->request->getPost('lst_autor'),
-            'anio_publicacion' => $this->request->getPost('txt_anio'),
+            'precio' => $this->request->getPost('txt_precio'),
             'estado' => $this->request->getPost('lst_estado')
         ];
 

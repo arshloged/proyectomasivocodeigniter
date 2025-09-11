@@ -12,8 +12,8 @@ class LibrosModel extends Model
         'codigo_libro',
         'titulo', 
         'codigo_editorial', 
-        'codigo_autor', 
-        'anio_publicacion', 
+        'codigo_autor',
+        'precio',  
         'estado'
     ];
 }

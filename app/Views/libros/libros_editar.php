@@ -11,6 +11,7 @@
         <h1>Editar Libro</h1>
         <hr>
         <form action="<?= base_url('libros/actualizar'); ?>" method="post">
+
             <?= csrf_field() ?>
             <input type="hidden" name="txt_codigo_libro" value="<?= $libro['codigo_libro']; ?>">
 
@@ -42,8 +43,8 @@
             </div>
             
             <div class="mb-3">
-                <label for="txt_anio" class="form-label">Precio</label>
-                <input type="number" name="txt_anio" id="txt_anio" class="form-control" value="<?= $libro['precio']; ?>">
+                <label for="txt_precio" class="form-label">Precio</label>
+                <input type="number" name="txt_precio" id="txt_precio" class="form-control" value="<?= $libro['precio']; ?>">
             </div>
 
             <div class="mb-3">

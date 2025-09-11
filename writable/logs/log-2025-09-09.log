@@ -147,3 +147,105 @@ Stack trace:
 #12 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 #13 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 #14 {main}
+CRITICAL - 2025-09-09 17:07:05 --> ErrorException: Undefined variable $empleados
+[Method: POST, Route: login]
+in APPPATH\Views\empleados\index.php on line 27.
+ 1 APPPATH\Views\empleados\index.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $empleados', 'C:\\xampp\\htdocs\\fs2025fs\\codeigniter_biblios\\app\\Views\\empleados\\index.php', 27)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\fs2025fs\\codeigniter_biblios\\app\\Views\\empleados\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('empleados/index', [], true)
+ 5 APPPATH\Controllers\EmpleadosController.php(33): view('empleados/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpleadosController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadosController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-09 17:36:56 --> Error: Call to a member function orderBy() on array
+[Method: GET, Route: prestamos]
+in APPPATH\Controllers\PrestamosController.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PrestamosController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrestamosController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-09 17:37:02 --> Error: Call to a member function orderBy() on array
+[Method: GET, Route: prestamos]
+in APPPATH\Controllers\PrestamosController.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PrestamosController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrestamosController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-09-09 17:53:54 --> mysqli_sql_exception: Unknown column 'anio_publicacion' in 'field list' in C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `libros`...', 0)
+#1 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `libros`...')
+#2 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `libros`...')
+#3 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `libros`...', Array, false)
+#4 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\BaseModel.php(1025): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Model.php(860): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\app\Controllers\LibrosController.php(85): CodeIgniter\Model->update('100061', Array)
+#8 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(933): App\Controllers\LibrosController->actualizarLibro()
+#9 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+#10 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\fs2025fs\codeigniter_biblios\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-09-09 17:53:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'anio_publicacion' in 'field list'
+[Method: POST, Route: libros/actualizar]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `libros` SET `titulo` = :titulo:, `codigo_editorial` = :codigo_editorial:, `codigo_autor` = :codigo_autor:, `anio_publicacion` = :anio_publicacion:, `estado` = :estado:
+WHERE `libros`.`codigo_libro` IN :libros.codigo_libro:', [...], false)
+ 2 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\LibrosController.php(85): CodeIgniter\Model->update('100061', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LibrosController->actualizarLibro()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-09 17:53:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'anio_publicacion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `libros` SET `titulo` = \'Libro 61\', `codigo_editorial` = \'100\', `codigo_autor` = \'26\', `anio_publicacion` = \'350\', `estado` = \'1\'
+WHERE `libros`.`codigo_libro` IN (\'100061\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `libros` SET `titulo` = \'Libro 61\', `codigo_editorial` = \'100\', `codigo_autor` = \'26\', `anio_publicacion` = \'350\', `estado` = \'1\'
+WHERE `libros`.`codigo_libro` IN (\'100061\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `libros` SET `titulo` = :titulo:, `codigo_editorial` = :codigo_editorial:, `codigo_autor` = :codigo_autor:, `anio_publicacion` = :anio_publicacion:, `estado` = :estado:
+WHERE `libros`.`codigo_libro` IN :libros.codigo_libro:', [...], false)
+ 4 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\LibrosController.php(85): CodeIgniter\Model->update('100061', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LibrosController->actualizarLibro()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-09 17:53:54 --> [Caused by] mysqli_sql_exception: Unknown column 'anio_publicacion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `libros` SET `titulo` = \'Libro 61\', `codigo_editorial` = \'100\', `codigo_autor` = \'26\', `anio_publicacion` = \'350\', `estado` = \'1\'
+WHERE `libros`.`codigo_libro` IN (\'100061\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `libros` SET `titulo` = \'Libro 61\', `codigo_editorial` = \'100\', `codigo_autor` = \'26\', `anio_publicacion` = \'350\', `estado` = \'1\'
+WHERE `libros`.`codigo_libro` IN (\'100061\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `libros` SET `titulo` = \'Libro 61\', `codigo_editorial` = \'100\', `codigo_autor` = \'26\', `anio_publicacion` = \'350\', `estado` = \'1\'
+WHERE `libros`.`codigo_libro` IN (\'100061\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `libros` SET `titulo` = :titulo:, `codigo_editorial` = :codigo_editorial:, `codigo_autor` = :codigo_autor:, `anio_publicacion` = :anio_publicacion:, `estado` = :estado:
+WHERE `libros`.`codigo_libro` IN :libros.codigo_libro:', [...], false)
+ 5 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\LibrosController.php(85): CodeIgniter\Model->update('100061', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LibrosController->actualizarLibro()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
