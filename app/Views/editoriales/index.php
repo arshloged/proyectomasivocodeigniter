@@ -25,6 +25,17 @@ Swal.fire({
 </script>
 <?php endif; ?>
 
+
+<?php if (session()->getFlashdata('mensajes')): ?>
+<script>
+Swal.fire({
+  title: "que paso?",
+  text: "<?= session()->getFlashdata('mensajes') ?>",
+  icon: "success"
+});
+</script>
+<?php endif; ?>
+
 <div class="d-flex justify-content-between align-items-center mb-3">
     <h2>Lista de Editoriales</h2>
     <a href="<?= base_url('editoriales/crear'); ?>" class="btn btn-success">+ Agregar Editorial</a>

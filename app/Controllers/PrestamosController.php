@@ -52,7 +52,7 @@ class PrestamosController extends BaseController
         ];
 
         $prestamosModel->insert($datos);
-        return redirect()->to(base_url('prestamos'));
+        return redirect()->to(base_url('prestamos'))->with('agregado', 'se presto el libro bonito');
     }
 
     public function editarPrestamo($numero_prestamo) 
@@ -86,13 +86,13 @@ class PrestamosController extends BaseController
         ];
 
         $prestamosModel->update($numero_prestamo, $datos); 
-        return redirect()->to(base_url('prestamos'));
+        return redirect()->to(base_url('prestamos'))->with('actualizado', 'se hicieron cambios sospechosos');
     }
 
     public function eliminarPrestamo($numero_prestamo)
     {
         $prestamosModel = new PrestamosModel();
         $prestamosModel->delete($numero_prestamo); 
-        return redirect()->to(base_url('prestamos'));
+        return redirect()->to(base_url('prestamos'))->with('eliminado', 'se borró eso que borrastes');
     }
 }

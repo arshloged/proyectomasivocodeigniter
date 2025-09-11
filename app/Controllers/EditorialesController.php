@@ -48,7 +48,7 @@ class EditorialesController extends BaseController
             'email' => $this->request->getPost('email'),
         ];
         $editorialModel->update($id, $datos);
-        return redirect()->to(base_url('editoriales/listar'))->with('mensaje', 'nueva info agregada');
+        return redirect()->to(base_url('editoriales/listar'))->with('mensajes', 'nueva info agregada');
     }
 
     public function eliminar($id)

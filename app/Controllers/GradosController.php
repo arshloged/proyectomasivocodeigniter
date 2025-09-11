@@ -20,12 +20,12 @@ class GradosController extends BaseController
 
         $datos = [
             'codigo_grado' => $this->request->getPost('txt_codigo'),
-            'nombre'       => $this->request->getPost('txt_nombre')
+            'nombre' => $this->request->getPost('txt_nombre')
         ];
 
         $gradosModel->insert($datos);
 
-        return $this->response->redirect(base_url('grados'));
+return redirect()->to(base_url('grados'))->with('agregado', 'se agregó estafa educacional');
     }
 
     
@@ -38,32 +38,29 @@ class GradosController extends BaseController
         return view('grados_editar', $datos);
     }
 
-  public function actualizarGrado()
+public function actualizarGrado($codigo)
 {
-    dd($this->request->getPost()); 
-
     $gradosModel = new GradosModel();
 
-    $codigo = $this->request->getPost('txt_codigo');
-    $nombre = $this->request->getPost('txt_nombre');
-    
     $datos = [
-        'nombre' => $nombre
+        'nombre' => $this->request->getPost('txt_nombre')
     ];
 
     $gradosModel->update($codigo, $datos);
 
-    return $this->response->redirect(base_url('grados'));
+    return redirect()->to(base_url('grados'))->with('mensaje','se cambió lo que cambiaste');
 }
+
+
 
    public function eliminarGrado($codigo)
 {
-    $gradoModel = new EstudiantesModel();
+    $gradoModel = new GradosModel();
     
     $gradoModel->where('codigo_grado', $codigo)->delete();
     
     return redirect()->to(base_url('grados'))
-                     ->with('eliminado', 'Grado eliminado correctamente');
+                     ->with('eliminado', 'el grado fue removido');
 }
 
 }

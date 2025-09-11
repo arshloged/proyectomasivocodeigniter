@@ -47,7 +47,7 @@ class EstudiantesController extends BaseController
     public function editarEstudiante($id){
 
         $id = $this->request->getPost('id');
-        
+
         $datos=[
             'carne_alumno'=>$this->request->getPost('txt_carnet'),
             'nombre'=>$this->request->getPost('txt_nombre'),
@@ -62,7 +62,7 @@ class EstudiantesController extends BaseController
         try {
             $estudiante = new EstudiantesModel();
             $estudiante->update($id, $datos);
-            return redirect()->to(base_url('estudiantes'))->with('agregado','Estudiantin Actualizadin');
+            return redirect()->to(base_url('estudiantes'))->with('actualizado','Estudiantin Actualizadin');
         }catch (\Throwable $hh) {
             return redirect()->back()->with('error','error tremendo de usuario');
         }
@@ -96,7 +96,7 @@ class EstudiantesController extends BaseController
     $estudianteModel->where('carne_alumno', $carnet)->delete();
     
     return redirect()->to(base_url('estudiantes'))
-                     ->with('eliminado', 'Estudiante eliminado correctamente');
+                     ->with('eliminado', 'estudiante eliminado correctamente');
 }
 
 }

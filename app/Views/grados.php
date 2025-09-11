@@ -4,10 +4,35 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Estudiantes</title>
+    <title>Grados</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        
 </head>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<?php 
+$mensaje = session()->getFlashdata('agregado') ?? session()->getFlashdata('mensaje') ?? session()->getFlashdata('eliminado'); 
+
+if ($mensaje): 
+?>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    Swal.fire({
+        icon: 'success',
+        title: 'excelentisimo',
+        text: <?= json_encode($mensaje, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP) ?>,
+        confirmButtonText: 'va'
+    });
+});
+</script>
+<?php endif; ?>
+
+
+
+
+
 
 <body>
     <div class="container">
@@ -31,17 +56,14 @@
                     <div class="modal-body">
                         <form action="<?=base_url('agregar_grado');?>" method="post">
                             <label for="txt_grado" class="form-label">Grado</label>
-                            <input type="numbre" name="txt_codigo" id="txt_codigo" class="form-control">
+                            <input type="number" name="txt_codigo" id="txt_codigo" class="form-control">
                             <label for="txt_nombre" class="form-label">Nombre</label>
                             <input type="text" name="txt_nombre" id="txt_nombre" class="form-control">
                           
                             <button type="submit" class="form-control btn btn-primary mt-2">Guardar</button>
                         </form>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary">Guardar Cambios</button>
-                    </div>
+                    
                 </div>
             </div>
         </div>

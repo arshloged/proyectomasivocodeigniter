@@ -38,7 +38,7 @@
                 <option value="3">Maestro</option>
             </select>
         </div>
-        <button type="submit" class="btn btn-success">Guardar</button><br><br>
+        <button type="submit" class="btn btn-success">Guardar</button>
         <a href="<?= base_url('empleados/listar'); ?>" class="btn btn-secondary">Cancelar</a>
     </form>
 

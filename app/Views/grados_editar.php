@@ -13,8 +13,8 @@
         <h1>Editar Grado</h1>
         <hr>
 
-        <form action="<?= route_to('grados_actualizar') ?>" method="post">
-    <?= csrf_field() ?>
+<form action="<?= base_url('grados_actualizar/'.$grado['codigo_grado']) ?>" method="post">
+        <?= csrf_field() ?>
 
     <input type="hidden" name="txt_codigo" value="<?= $grado['codigo_grado']; ?>">
     

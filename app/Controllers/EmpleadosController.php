@@ -40,7 +40,7 @@ class EmpleadosController extends BaseController
             }
         }else{
             echo ("datos incorrectos");
-            return redirect()->back()->withInput()->with('errors','Datos incorrectos');
+            return redirect()->back()->withInput()->with('errors','te equivocastes');
         }
         return view($ubicacion);
     }
@@ -72,7 +72,8 @@ class EmpleadosController extends BaseController
         }
 
         $empleadoModel->update($id, $datos);
-        return redirect()->to(base_url('empleados/listar'));
+        return redirect()->to(base_url('empleados/listar'))->with('actualizado', 'se hicieron cambios sospechosos');
+    
     }
 
     public function eliminar($id)
@@ -80,7 +81,7 @@ class EmpleadosController extends BaseController
         $empleadoModel = new EmpleadosModel();
         $empleadoModel->delete($id);
 
-        return redirect()->to(base_url('empleados'));
+        return redirect()->to(base_url('empleados/listar'))->with('eliminado', 'empleado despedido, ya tenemos más presupuesto!');
     
     }
 
@@ -103,7 +104,7 @@ public function guardar()
     ];
 
     $empleadoModel->insert($datos);
-    return redirect()->to(base_url('empleados/listar'));
+    return redirect()->to(base_url('empleados/listar'))->with('agregado', 'se agrego una plaza fantasma');;
 }
 
 }

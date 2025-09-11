@@ -50,7 +50,7 @@ class LibrosController extends BaseController
         ];
 
         $librosModel->insert($datos);
-        return redirect()->to(base_url('libros'));
+        return redirect()->to(base_url('libros'))->with('agregado', 'se agrego algo bonito a la basesita de datos');
     }
 
    public function editarLibro($codigo)
@@ -84,13 +84,13 @@ class LibrosController extends BaseController
         ];
 
         $librosModel->update($codigo, $datos);
-        return redirect()->to(base_url('libros'));
+        return redirect()->to(base_url('libros'))->with('actualizado', 'cambiando cosas como siempre');
     }
 
     public function eliminarLibro($codigo)
     {
         $librosModel = new LibrosModel();
         $librosModel->delete($codigo);
-        return redirect()->to(base_url('libros'));
+        return redirect()->to(base_url('libros'))->with('eliminado', 'se borraron los poemas de amor');
     }
 }

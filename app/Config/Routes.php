@@ -15,11 +15,13 @@ $routes->post('editazionbonita','EstudiantesController::editarEstudiante/$1');
 $routes->get('grados','GradosController::index');
 $routes->get('buscar_grados/(:num)','GradosController::buscarGrados/$1');
 $routes->get('grados/eliminar/(:segment)', 'GradosController::eliminarGrado/$1');
+$routes->post('agregar_grado', 'GradosController::agregarGrado');
 
 
-// Rutas para la funcionalidad de actualizar
+
 $routes->get('editar/(:num)','GradosController::editarGrado/$1');
-$routes->post('actualizar', 'GradosController::actualizarGrado');
+$routes->post('grados_actualizar/(:num)', 'GradosController::actualizarGrado/$1');
+
 
 // Rutas para la gestión de Préstamos
 $routes->get('prestamos', 'PrestamosController::index');

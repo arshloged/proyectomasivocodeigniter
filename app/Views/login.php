@@ -24,7 +24,7 @@
                 <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                 <a class="nav-link" href="<?= site_url('estudiantes') ?>">Estudiantes</a>
                 <a class="nav-link" href="<?= site_url('grados') ?>">Grados</a>
-                <a class="nav-link" href="<?= site_url('prestamos') ?>">Prestamos</a>
+                <a class="nav-link" href="<?= site_url('prestamos') ?>">Préstamos</a>
                 <a class="nav-link" href="<?= base_url('libros') ?>">Libros</a>
                 <a class="nav-link" href="<?= base_url('empleados/listar') ?>">Empleados</a>
                 <a class="nav-link" href="<?= base_url('autores/listar') ?>">Autores</a>
@@ -95,7 +95,7 @@
         <script>
         Swal.fire({
             icon: "error",
-            title: "ALTA, DIGO, ALTO!!",
+            title: "Alto - останавливаться - 停止",
             text: "<?= session()->getFlashdata('errors') ?>"
         });
         </script>
